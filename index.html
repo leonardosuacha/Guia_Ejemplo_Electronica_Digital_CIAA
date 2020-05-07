@@ -1,494 +1,924 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sin título</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Guia de Aprendizaje</title>
+<style>
+#playlist {
+    display:table;
+}
+#playlist li{
+    cursor:pointer;
+    padding:8px;
+}
 
+#playlist li:hover{
+    color:blue;                        
+}
+#videoarea {
+    float:left;
+    width:100%;
+    height:480px;
+    margin:10px;    
+    border:1px solid silver;
+    align-content: center;
+}
 
-
-
-<style type="text/css">
+.centrado {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
 <!--
-body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: #42413C;
-	margin: 0;
-	padding: 0;
-	color: #000;
-}
-
-/* ~~ Selectores de elemento/etiqueta ~~ */
-ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
-	padding: 0;
-	margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
-	padding-right: 15px;
-	padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
-}
-a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
-	border: none;
-}
-/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
-a:link {
-	color: #42413C;
-	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
-}
-a:visited {
-	color: #6E6C64;
-	text-decoration: underline;
-}
-a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
-	text-decoration: none;
-}
-
-/* ~~ este contenedor de anchura fija rodea a todos los demás elementos ~~ */
-.container {
-	width: 960px;
-	background-color: #FFF;
-	margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño */
-}
-
-/* ~~ Esta es la información de diseño. ~~ 
-
-1) El relleno sólo se sitúa en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
-
-*/
-.content {
-
-	padding: 10px 0;
-}
-
-/* ~~ clases float/clear varias ~~ */
-.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
-	float: right;
-	margin-left: 8px;
-}
-.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
-	float: left;
-	margin-right: 8px;
-}
-.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si se elimina overflow:hidden en .container */
-	clear:both;
-	height:0;
-	font-size: 1px;
-	line-height: 0px;
-}
+h1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:14.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#262626;
+	}
+table.MsoTableGrid
+	{border:1.0pt solid windowtext;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
 -->
-</style></head>
+</style>
+</head>
 
 <body>
 
-<div class="container">
-  <div class="content">
-    <p><em>&nbsp;</em></p>
-    <p><strong>1. IDENTIFICACIÓN DE LA GUIA DE APRENDIZAJE </strong></p>
-    <ul>
-      <li>Denominación del  Programa de Formación: <strong>CURSO  INTRODUCTORIO A LA FORMACIÓN PROFESIONAL INTEGRAL</strong></li>
-      <li>Código del Programa de  Formación: 41311582 </li>
-      <li>Fase del Proyecto: Análisis </li>
-      <li>Actividad de Proyecto:  Reconocimiento institucional, de las oportunidades ofrecidas y de los  compromisos asumidos como aprendiz en el SENA.</li>
-      <li>Competencia: Resultado  de aprendizaje de la inducción Código: 240201530 </li>
-      <li>Resultados de Aprendizaje  Alcanzar:     </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-      <li>Identificar la  dinámica organizacional del SENA, su estructura corporativa, políticas y  normatividad esencial de acuerdo con los parámetros establecidos por la  entidad.</li>
-    </ul>
-    <ul>
-      <li>Identificar la  características, metodologías y medios para la formación integral en el SENA,  de acuerdo con la dotación de ambientes de los centros de formación.</li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-      <li>Identificar el  aporte desde el plan de acción con el proyecto de vida y el desarrollo profesional  del aprendiz de acuerdo con el plan nacional de bienestar al aprendiz.</li>
-    </ul>
-    <ul>
-      <li>Identificar la  propuesta de la formación profesional integral con su tipología, niveles y  resultados esperados de acuerdo con el diseño curricular de los programas  propuestos.</li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-      <li>Duración de la Guía: 40 horas </li>
-    </ul>
-    <p><strong>2. PRESENTACIÓN</strong><br />
-      La  inducción es el proceso inicial de la formación en el SENA, el cual, busca que  el aprendiz desarrolle las competencias básicas y necesarias <em>para navegar con fluidez en su aprendizaje</em>.  La inducción es un factor clave de éxito en el proceso de formación; <em>es el punto de partida</em> en el cual el <em>aprendiz reconoce la entidad, la  normatividad y servicios institucionales, así como, el programa de formación,  su proyección laboral y la estrategia de formación y el aprendizaje que el SENA  ofrece</em>. <a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1"> </a></p>
-    <p>&nbsp;</p>
-    <p>Como  parte importante de la formación del SENA, es necesario que como aprendiz  inicie el proceso de formación, identificando, la Institución a la que ingresa  y ubicándose en el medio y sector en que está involucrado su programa de  formación a nivel local, regional y global.</p>
-    <p>En  esta fase de la formación, usted como aprendiz tiene muchas inquietudes: ¿dónde  estoy?, ¿qué es el SENA?, ¿qué me ofrece el SENA como aprendiz?, ¿qué deberes,  compromisos tengo por ser aprendiz matriculado en un programa de formación?,  ¿cuáles son mis derechos como aprendiz?,   ¿cuál es la metodología de formación?, ¿qué ambientes de aprendizaje  tiene el programa?, ¿qué tecnologías de la información y comunicación debo  manejar para desarrollar el programa de formación? ¿Qué deseo hacer con mi  vida?</p>
-    <p><em>&nbsp;</em></p>
-    <p><strong>3.   FORMULACIÓN DE LAS ACTIVIDADES DE APRENDIZAJE</strong></p>
-    <p><strong>ACTIVIDADES DE CONTEXTUALIZACIÓN E  IDENTIFICACIÓN DE CONOCIMIENTOS NECESARIOS PARA EL APRENDIZAJE, ELABORO UN  PERIÓDICO (Actividad para realizar durante todo el proceso)</strong></p>
-    <p>Con  mi grupo colaborativo conformado por mi instructor o conformado por criterios  propios, elaboro un periódico digital que me permita organizar toda la  información adquirida en éste proceso de inducción, bien sea textos e imágenes  producidas en el transcurso del mismo; es importante que recuerde que todo  periódico tiene como finalidad informar los acontecimientos que suceden, por lo  tanto, en la elaboración de mi periódico contaré lo que he venido aprendido  acerca del SENA y para poderlo llevar a cabo planeo con mi equipo colaborativo  las secciones que debe contener, las cuales deben guardar relación con lo  trabajado en éste proceso, se recomienda: </p>
-    <ul>
-      <li><strong>Plana</strong>:  Es la página sobre la que se escriben las noticias.</li>
-      <li><strong>Primera  plana</strong>: es la plana principal del periódico, es lo que todos conocemos como  portada del periódico. Aquí se muestran las noticias más relevantes para captar  la atención del público y que este se interese en leer el periódico.</li>
-      <li><strong>Titular</strong>:  es la frase con la que se identifica a una noticia, siempre es en negritas y de  un tamaño mayor al de la noticia.</li>
-      <li><strong>Noticia</strong>:  corresponde a toda la información que da hecho al suceso o información de  interés, se describen lugares, fechas, participantes, etc, pudiendo citarse  frases dichas o escritas en algún otro medio.</li>
-      <li><strong>Columna</strong>:  es un artículo en el cual el autor estampa su opinión o punto de vista con  respecto a algún tema en particular, pudiendo ser de actualidad, deportes,  sociedad, economía, etc. Generalmente una columna lleva adjunto el nombre del  autor y a veces hasta una fotografía y la firma de él, es por esto que se debe  tener una buena credibilidad para poder llegar al público y no ser rechazado  por posibles prejuicios que existan contra el autor.</li>
-      <li><strong>Suplemento</strong>:  son secciones del periódico que están dedicadas a temas de interés según la  estación o la ocasión. Buscan captar la atención del público aludiendo a la  estación o momento que se está viviendo, por ejemplo, si se está&nbsp;en  diciembre se podría hacer un suplemento dedicado a las fiestas navideñas, de  esta manera se atrae a público que podría no ser lector habitual del periódico,  pero le interesa el suplemento de navidad.&nbsp; Los suplementos también son  usados por los periódicos para atraer más anunciantes que estén dispuestos a  poner su publicidad en temas que son de interés para el público.</li>
-      <li><strong>Secciones</strong>:  son las partes del periódico donde se mostrará información agrupada bajo la  misma categoría. Las secciones típicas de un periódico son noticias  internacionales, noticias nacionales, deportes, entretenimiento&nbsp;y ocio,  anuncios clasificados, etc.</li>
-      <li><strong>Cabecera</strong>:  en esta parte se muestra el nombre, logotipo y el eslogan del periódico. Está  ubicada en la parte superior tanto en la primera plana como en las  demás&nbsp;planas.</li>
-      <li><strong>Orejilla</strong>:  son anuncios que van en la primera plana del periódico, pueden ir en la parte  superior o en la parte inferior de la primera plana y despliegan información  comercial de otras empresas, productos o servicios.</li>
-    </ul>
-    <p>               O en su defecto, creo el propio diseño de mi periódico; es importante,  que todas las producciones, resultados de test, fotografías, consultas y la  información de bienestar, biblioteca, contrato de aprendizaje…  aparezcan en la misma producción, así, de  esta manera recogeré en un solo producto todas las evidencias obtenidas.</p>
-    <p>Para  tener como punto de apoyo, el instructor nos recomienda utilizar todos los link  proporcionados y a su vez acceder al siguiente: <a href="http://www.youtube.com/playlist?list=PLjI9SnLq-pXZrxoiF1fV63Hwqs1tP_RwM">http://www.youtube.com/playlist?list=PLjI9SnLq-pXZrxoiF1fV63Hwqs1tP_RwM</a><u> </u></p>
-    <p>Al  final de cada actividad contaré con un espacio de tiempo para alimentar mi  periódico y al final del proceso tendré un espacio de tiempo más prolongado  para elaborarlo y terminarlo.<strong> </strong></p>
-    <p><strong>Evidencia de Desempeño: </strong>Participación  en la construcción del periódico digital con mi grupo colaborativo.<br />
-      <strong>Evidencia de Producto: </strong>Elaboración de  un periódico digital con mi grupo colaborativo.</p>
-    <p>&nbsp;</p>
-    <p><strong>&nbsp;</strong></p>
-    <p><strong>ACTIVIDADES DE APROPIACIÓN, ELABORO EL  CUENTO DE MI VIDA (Actividad para realizar de manera autónoma)</strong></p>
-    <p>Veo  el vídeo el Circo de la Mariposa y me reúno con los compañeros que desee  formando subgrupos entre 4 y 5 aprendices, y resuelvo con ellos las siguientes  preguntas e inquietudes, ¿qué me dejó de aprendizaje?, ¿Qué escena del vídeo me  impactó más?, ¿Con cuál de las frases mencionadas me identifico?<br />
-      Escucho  la explicación de la actividad del cuento de mi vida, el cual debo empezar a  escribir autónomamente, es decir, escribo &quot;El cuento de mi vida&quot;,  desde que nací, las cosas que me han contado y algunas vivencias  importantes.  Llevo el cuento de mi vida  a casa y averiguo con personas de mi familia otros aspectos y los escribo.  Estos aspectos pueden ser: Cuándo y cómo se conocieron mis padres, abuelos   y otras generaciones de ancestros, historias  de ellos, de donde escogieron el nombre que tengo, qué significa, experiencias  de mi niñez y anécdotas familiares. Incluyo fotografías en el documento que  realice. Posteriormente vuelvo a retomar mi cuento para socializarlo con mis  compañeros e instructor.<br />
-      Instrucciones:  Guardo &quot;El cuento de mi vida&quot;, en el portafolio de evidencias y  reflexiono sobre la experiencia.</p>
-    <p><strong>ACTIVIDADES POR RESULTADO DE APRENDIZAJE  #1: </strong>Identificar la dinámica organizacional del SENA,  su estructura corporativa, políticas y normatividad esencial de acuerdo con los  parámetros establecidos por la entidad.</p>
-    <ul>
-      <li><strong>ACTIVIDAD DE REFLEXIÓN INICIAL</strong></li>
-    </ul>
-    <p><strong>&nbsp;</strong></p>
-    <p>Usted  como aprendiz es la razón de ser de esta entidad, a través de la elaboración de  un mapa de empatía, herramienta utilizada en el mundo de los negocios para  segmentar la clientela, se quiere identificar qué conocimientos y experiencia  previa tiene sobre el SENA.</p>
-    <p>Es  importante que reconozca sus conceptos y apreciaciones de la institución a la  que usted ha llegado, para ello, se propone que se reúna con sus compañeros y  una vez conformado el grupo, desarrolle un mapa de la empatía, en este mapa,  escribir:</p>
-    <ul>
-      <li>¿Que ha escuchado, que sabe, que ha visto y que piensa  y siente del SENA y este centro de formación?</li>
-      <li>¿Qué beneficios y resultados espero alcanzar en el  SENA, en el centro de formación? ¿Qué necesidades y deseos reales espero  lograr?</li>
-      <li>¿Cuáles son los obstáculos o frustraciones que puede  encontrar al estudiar en el SENA y en el Centro de la innovación, la agroindustria  y la aviación, cuáles esfuerzos tiene que hacer, a qué le tienen miedo, qué  riesgos debe asumir?</li>
-    </ul>
-    <p>&nbsp;</p>
-    <p>Para desarrollar,  esta actividad, por favor siga las orientaciones del instructor, para que al  final quede el mapa construido de manera colectiva y se pueda identificar lo  que el usted y el grupo saben, conocen, sienten y han escuchado sobre la  institución que eligieron para estudiar y desarrollar su proyecto de vida.</p>
-    <p><strong>Evidencia de desempeño</strong>: Participación  en la construcción de la matriz de empatía &ldquo;me identifico con el SENA&rdquo; de  manera colectiva. <br />
-      <strong>Evidencia de producto: </strong>Mapa de empatía  elaborado por el grupo.</p>
-    <p>&nbsp;</p>
-    <p>Ejemplos de mapas  de empatía:<br />
-      <strong> </strong><br />
-      <img border="0" width="436" height="218" src="index_clip_image002_0000.gif" alt="http://www.eoi.es/fdi/sites/default/files/Mapa_Empatia_v0.png" />           <strong></strong><br />
-      <img border="0" width="485" height="283" src="index_clip_image004_0000.jpg" alt="Resultado de imagen para que es un mapa de empatia" /><strong></strong><br />
-      <strong>Me acerco y conozco  el SENA</strong></p>
-    <p>Reflexiono a  partir de las preguntas iniciales planteadas en las Actividades de Reflexión  Inicial, las cuales me servirán de guía para realizar esta tarea.<br />
-      Junto con mí  equipo colaborativo, observo en internet los siguientes vínculos, para conocer  cómo nació el SENA, los orígenes y la realidad que vivía el país en este  momento:</p>
-    <ul>
-      <li>Historia del SENA: <a href="https://www.youtube.com/watch?v=34o5N4Z7nAI">https://www.youtube.com/watch?v=34o5N4Z7nAI</a></li>
-      <li>Símbolos del SENA: <a href="https://www.youtube.com/watch?v=os56qQ5-_0g">https://www.youtube.com/watch?v=os56qQ5-_0g</a></li>
-      <li>SENA, lugar de las oportunidades: <a href="https://www.youtube.com/watch?v=njdHE9UeYzY">https://www.youtube.com/watch?v=njdHE9UeYzY</a></li>
-      <li>SENA, igualdad de oportunidades: <a href="https://www.youtube.com/watch?v=UpR038Ajo0c">https://www.youtube.com/watch?v=UpR038Ajo0c</a></li>
-      <li>¿Qué  es world skills?: <a href="https://www.youtube.com/watch?v=mKo5-c75KfM">https://www.youtube.com/watch?v=mKo5-c75KfM</a></li>
-      <li>¿Qué es el servicio público de empleo? <a href="https://www.youtube.com/watch?v=lHc_FfDhtn8">https://www.youtube.com/watch?v=lHc_FfDhtn8</a></li>
-      <li>¿Qué es SENNOVA? <a href="https://www.youtube.com/watch?v=RUGt7PQ42hk">https://www.youtube.com/watch?v=RUGt7PQ42hk</a></li>
-      <li>¿Qué es el contrato de aprendizaje? <a href="https://www.youtube.com/watch?v=A1BMYDV8MZE">https://www.youtube.com/watch?v=A1BMYDV8MZE</a></li>
-      <li>Fondo Emprender <a href="https://www.youtube.com/watch?v=uXNyOpwlOXY">https://www.youtube.com/watch?v=uXNyOpwlOXY</a><u> </u></li>
-    </ul>
-    <p>Debo recordar visitar también, el blog del centro de formación, <strong><em>Centro  de la Innovación, la Agroindustria y la Aviación</em></strong>, su dirección del blog  es: <a href="http://senaoriente.blogspot.com/">http://senaoriente.blogspot.com/</a><br />
-      Con la información observada en los links de los vídeos sobre el SENA y  el blog de nuestro centro y con las demás actividades desarrolladas en esta  guía de aprendizaje, debo desarrollar un esquema, gráfico, mapa, tabla o cuadro  sinóptico que dé respuesta a las preguntas:</p>
-    <ul>
-      <li>¿Dónde estoy formándome?</li>
-      <li>¿Qué oportunidades me ofrece el SENA para mi vida?</li>
-      <li>¿Qué compromisos tengo como aprendiz del SENA?</li>
-      <li>¿Qué otros servicios, plataformas, software, programas,  sistemas están relacionados con mi formación en el SENA?</li>
-      <li>Con mi equipo colaborativo, elaboro una secuencia de  indicaciones o instrucciones por medio de pantallazos, acerca de cómo se debe  ingresar a Sofía Plus y a la plataforma LMS, sería entonces dos instructivos de  ingreso que debo presentar en el periódico digital.</li>
-    </ul>
-    <p><strong>RECONOZCO MIS DERECHOS Y DEBERES COMO  APRENDIZ.</strong><br />
-      Mi  instructor nos presenta el reglamento del aprendiz, un manual con indicaciones  acerca de los derechos y deberes que tenemos en la institución; solicita que me  reúna con mi equipo colaborativo para leer un cuestionario sobre el reglamento  del aprendiz, para ello debo tener abierto el archivo con este material.</p>
-    <p>Terminado  de realizar el cuestionario, mi instructor nos recomienda que nos dispongamos  en mesa redonda para socializar y conversar acerca de las respuestas  encontradas a la luz del reglamento del aprendiz.</p>
-    <p>Me  reúno en los equipos establecidos por el instructor y preparo una breve  dramatización que muestre la aplicación del debido proceso cuando se incurre en  prohibiciones o incumplimiento de los deberes de los aprendices.</p>
-    <p><strong>ACTIVIDADES  POR RESULTADO DE APRENDIZAJE #2</strong><br />
-      <strong>EN MI CENTRO DE FORMACIÓN CIAA</strong><br />
-      Observo los  siguientes videos institucionales y del centro de formación al cual pertenezco:  Realizo preguntas y resuelvo inquietudes que me generaron:<br />
-      Inducción SENA 2020, Bienvenida  por el Director General del SENA Carlos Mario Estrada: <a href="https://www.youtube.com/watch?v=RJGMQZ5hFRU">https://www.youtube.com/watch?v=RJGMQZ5hFRU</a> <u> </u></p>
-    <h1><a name="_heading=h.gjdgxs" id="_heading=h.gjdgxs"></a>Video  motivacional: SENA 2010-2017                           <a href="https://drive.google.com/drive/folders/1aSNDeUHMeqV8PwkEF0EMsqA3QdsSAwUL">https://drive.google.com/drive/folders/1aSNDeUHMeqV8PwkEF0EMsqA3QdsSAwUL</a><u> </u></h1>
-    <h1><a name="_heading=h.2gjzj3wvrjoz" id="_heading=h.2gjzj3wvrjoz"></a>Video  institucional SENA Oriente 2017  <a href="https://drive.google.com/drive/folders/0BxDO2z5qQExPWEI4VjQxd0pGbkE">https://drive.google.com/drive/folders/0BxDO2z5qQExPWEI4VjQxd0pGbkE</a></h1>
-    <h1><a name="_heading=h.vwf1j7ott9fl" id="_heading=h.vwf1j7ott9fl"></a>EVIDENCIA DE DESEMPEÑO: Observación  de los videos y aclaración de inquietudes. </h1>
-    <p><strong>&nbsp;</strong></p>
-    <p><strong>CONCÉNTRESE ARMANDO PAREJAS SOBRE EL SENA </strong><br />
-      Para  desarrollar ésta actividad, debo tener en cuenta la información recibida en la  actividad de reflexión inicial: &ldquo;<strong>Me  acerco y conozco el SENA</strong>&ldquo;, luego Ingreso al link: <a href="http://www.educaplay.com/es/recursoseducativos/2243876/familiarizandonos_con_el_sena.htm">http://www.educaplay.com/es/recursoseducativos/2243876/familiarizandonos_con_el_sena.htm</a><u> </u></p>
-    <p>Ubico la  actividad que se llama <strong><em>Familiarizándonos con el SENA</em></strong>, luego  doy clic sobre el botón comenzar, a jugar y a recordar se dijo.<br />
-      Observo cada  recuadro, luego de acuerdo a la información, fotografías e imágenes, armo las  parejas que correspondan, el juego termina cuando haya completado y obtenido un  resultado de 100 puntos.<br />
-  <strong>EVIDENCIA DE DESEMPEÑO: </strong>Cumplimiento,  haber participado en el juego y logrando cada vez más, respuestas acertadas  sobre el SENA.<br />
-  <strong>ACTIVIDADES DE TRANSFERENCIA DEL  CONOCIMIENTO</strong></p>
-    <p>Me  reúno con mi equipo colaborativo para realizar el siguiente trabajo:</p>
-    <ul>
-      <li>Ingreso a internet escribo la siguiente  dirección: http://biblioteca.sena.edu.co</li>
-      <li>Elija &ldquo;Sistema de Bibliotecas SENA&rdquo;.</li>
-      <li>Ubique la pestaña &ldquo;Servicios&rdquo;, haga clic allí,  luego en &ldquo;Formación&rdquo; y elija, &ldquo;Métodos de estudio&rdquo;.</li>
-      <li>Por favor revise, lea y comprenda el material  relacionado con métodos de estudio.</li>
-      <li>Investigue que es una Línea de tiempo.</li>
-    </ul>
-    <p>&nbsp;</p>
-    <p><strong>EVIDENCIA DE  DESEMPEÑO: </strong>Teniendo en cuenta la actividad: &ldquo;Métodos de Estudio&rdquo;, elabore  una línea de tiempo sobre el tema adaptando la información a los resultados  arrojados en: &ldquo;Hábitos de estudio&rdquo;, &ldquo;test inteligencias múltiples y &ldquo;formato de  identificación de los estilos de aprendizaje&rdquo;.</p>
-    <ul>
-      <li>Después de evaluar su línea de tiempo a la luz  de una &ldquo;Rúbrica de la línea de tiempo&rdquo; y logrando un cumplimiento de un 70 % o  más, debo ingresar mi línea de tiempo al periódico digital.</li>
-      <li>En caso de que su cumplimiento sea inferior al  70% deberá revisarlo y corregirlo, antes de ingresarlo al periódico digital.</li>
-      <li>Tutorial: Sistema de bibliotecas SENA-¿Cómo  buscar en las bibliotecas del SENA?  <a href="https://www.youtube.com/watch?v=X-pHntQ03I8">https://www.youtube.com/watch?v=X-pHntQ03I8</a><u> </u></li>
-    </ul>
-    <p><strong>BILINGUISMO:</strong></p>
-    <p>            Me reúno con mi equipo colaborativo  para observar el siguiente link, sobre la importancia <br />
-      del bilingüismo: La importancia de  saber inglés: </p>
-    <p><u>https://drive.google.com/drive/folders/1gfBgiHkcCaTya8XlnpYbcRPUCIOffQD0</u></p>
-    <p>Después  mi instructor nos invita a leer las diapositivas encontradas en el siguiente  enlace: <br />
-      SENA Bilingüe  2016-2018:</p>
-    <p>               <a href="https://drive.google.com/drive/folders/1gfBgiHkcCaTya8XlnpYbcRPUCIOffQD0">https://drive.google.com/drive/folders/1gfBgiHkcCaTya8XlnpYbcRPUCIOffQD0</a></p>
-    <p>              Nuevamente me reúno con mi equipo  colaborativo para conversar acerca de la importancia del inglés en nuestras  vidas y en mi futuro profesional, luego hago una presentación por medio de una  historieta acerca del tema: La importancia del inglés, la cual debe ser  adjuntada en el periódico digital.</p>
-    <p>Mi instructor nos  informa que:<br />
-  &ldquo;<em>Por requerimiento nacional la participación  y correcta aprobación de los aprendices en los cursos virtuales de inglés será  un requisito determinante al momento de la certificación técnica o tecnológica.  Es válido destacar que el aprendiz tendrá toda la etapa lectiva para realizar  correctamente los cursos que según su programa de formación lo exija. A  continuación se relaciona los programas de formación que requieren una  intensidad en inglés un poco más alta:</em><br />
-  <em>* Biotecnología Industrial</em><br />
-  <em>* Diseño de modas y confecciones</em><br />
-  <em>* Logística y transporte</em><br />
-  <em>* Informática diseño y desarrollo de  software</em><br />
-  <em>* Tecnologías de mantenimiento predictivo,  productivo y correctivo</em><br />
-  <em>    (Sólo los programas relacionados con aeronaves)</em><br />
-  <em>* Tecnologías de gestión administrativa y  servicios financieros.</em><br />
-  <em>    (Gestión administrativa - Contabilidad y finanzas)</em><br />
-  <em>* Tecnologías de la información. Diseño y  desarrollo de software</em><br />
-  <em>* Tecnologías de la información y las  comunicaciones</em><br />
-  <em>* Tecnologías de servicios de salud</em><br />
-  <em>* Tecnologías de servicios turísticos</em><br />
-  <em>* Ventas y comercialización</em><br />
-  <em>* Técnico en mesa y bar</em><br />
-  <em>* Tecnólogo en Guianza turística</em><br />
-  <em>* Técnico en gestión comercial y  telemercadeo</em><br />
-  <em>* Tecnología en gestión de mercados</em><br />
-  <em>Los grupos anteriormente relacionados  deberán cursar un mínimo de:</em></p>
-    <ul>
-      <li><em>5 niveles English Dot Works para Tecnólogos. </em></li>
-      <li><em>3 niveles English Dot Works para Técnicos. </em></li>
-    </ul>
-    <p><em>           Para el resto de grupos que no se  encuentran en la relación anterior, el requerimiento es: </em></p>
-    <ul>
-      <li><em>4 niveles English Dot Works para Tecnólogos </em></li>
-      <li><em>2 niveles English Dot works para Técnicos</em></li>
-    </ul>
-    <p><em>En lo relacionado  a la articulación con la media el requerimiento según circular 16060 del 2016 y  aún vigente, el aprendiz debe aprobar 3 niveles English Dot Works por un total  de 180 horas.</em></p>
-    <p><em>En compañía de mi instructor, me registro en  los cursos virtuales de inglés que requiero para iniciar mi proceso de  formación virtual, teniendo en cuenta mis conocimientos previos frente al  idioma inglés. Para realizar la inscripción sigo este enlace: </em><a href="https://www.youtube.com/watch?v=67kkoEWRQqI&amp;t=2s">https://www.youtube.com/watch?v=67kkoEWRQqI&amp;t=2s</a></p>
-    <p><strong>Evidencia desempeño: </strong>Observar  al aprendiz haciendo uso de las plataformas, blogs y páginas web  institucionales como: Sofía plus,  pagina  web del SENA,  blog del centro de  formación, de la biblioteca virtual entre otros. Observar el video la  importancia del inglés y ver el power point SENA bilingüe 2016-2018<br />
-      <strong>Evidencia de producto:</strong> Elaborar un manual de instrucciones que indiquen el paso a paso de ingreso a  Sofía Plus y a la plataforma LMS.</p>
-    <p><strong>ACTIVIDADES  POR RESULTADO DE APRENDIZAJE #3</strong><br />
-      <strong>IDENTIFICO MIS POTENCIALIDADES</strong><br />
-      Con  mi instructor y equipo colaborativo observo el video: &ldquo;Inducción SENA, estilos  de aprendizaje&rdquo;, comprendo y dialogo con mis compañeros acerca de la  información encontrada en el video y la relaciono con mi vida diaria, donde  reconozco mis fortalezas y aspectos por mejorar.</p>
-    <p>Link video 1: <a href="http://youtu.be/lPVr6wNogdc">http://youtu.be/lPVr6wNogdc</a><u> </u><br />
-      Link video 2: <u>https://drive.google.com/drive/folders/0Bw66F-GmkpPDdENKUWFHWjBFRFk</u></p>
-    <p>Por  sugerencia de mi instructor, el video 1 se detendrá en el momento que se  presentan las opciones de respuesta a la dramatización vista, con el fin que  cada uno observe el estilo de aprendizaje al que más se aproxima. </p>
-    <p>Seguidamente,  mi instructor me presenta el video 2 para comparar las informaciones contenidas  en ambos materiales en un conversatorio; posteriormente mi instructor entrega  el formato de identificación de estilos de aprendizaje, el cual debo realizar y  evidenciar el resultado allí obtenido.</p>
-    <p>Recibo  el cuestionario sobre las inteligencias múltiples y de cómo aprendo. Esta  actividad la realizo en forma autónoma.</p>
-    <p>En  mi equipo colaborativo evalúo el resultado arrojado por el instrumento de  evaluación de estilos de aprendizaje y de inteligencias múltiples; luego  analizo los estilos de aprendizaje y los tipos de inteligencias que se  encuentran en mi equipo y en conjunto formulamos cómo podemos potencializar  nuestro trabajo colaborativo desde la diversidad identificada.</p>
-    <p><strong>&nbsp;</strong></p>
-    <p><strong>LOS MÉTODOS DE ESTUDIO</strong></p>
-    <p><strong>Actividad de  aprendizaje: ¿Qué tipo de aprendiz soy ahora? Autoevaluación diagnóstica de  cómo estudio.</strong></p>
-    <p>Identifico los hábitos de estudio a través de un  test, que permita diagnosticar cuáles son adecuados para apropiarlos en la  mejora del rendimiento académico. Observar el archivo adjunto para conocer el  desarrollo de la actividad.</p>
-    <p><strong>ACTIVIDADES  POR RESULTADO DE APRENDIZAJE #4</strong>: Identificar la propuesta de la formación  profesional integral con su tipología, niveles y resultados esperados de  acuerdo con el diseño curricular de los programas propuestos.</p>
-    <p><strong>ACTIVIDADES DE  APROPIACIÓN</strong><br />
-      <strong> </strong><br />
-      <strong>CONTEXTUALIZACIÓN  DEL PROYECTO FORMATIVO</strong><br />
-      <strong> </strong><br />
-      Por equipos, lea, analice y prepare un organizador  gráfico, con el documento entregado por el instructor en el cual se exponen los  siguientes temas: las tendencias y megatendencias, contexto tecnológico local y  características del tema a intervenir en la zona y socializarla a toda la  ficha.<br />
-  <strong> </strong><br />
-  <strong>CONOZCAMOS EL  PROYECTO DEL EQUIPO EJECUTOR (MADRE)</strong><br />
-  <strong>            </strong><br />
-      El instructor socializa a los aprendices, la  estructura del diseño curricular y la trazabilidad de éste. Por equipos,  realizan una lista de preguntas, se sugieren cinco, que serán resueltas por los  equipos que estén relacionadas con el tema tratado.<br />
-  <strong> </strong><br />
-  <strong>IDENTIFIQUEMOS  NUESTRO PROGRAMA DE FORMACIÓN</strong><br />
-  <strong>            </strong><br />
-      El aprendiz recibe el programa de formación, observa  los siguientes videos con el fin de conocer la terminología institucional:</p>
-    <ul>
-      <li>Las competencias  laborales en el siguiente link: <a href="https://www.youtube.com/watch?v=Ljn7kMOpzzk">https://www.youtube.com/watch?v=Ljn7kMOpzzk</a></li>
-      <li>Competencias laborales  Sena:<a href="https://www.youtube.com/watch?v=KOqJQUlq3B0">https://www.youtube.com/watch?v=KOqJQUlq3B0</a><u> </u></li>
-      <li>Competencias de  empleabilidad: <a href="https://www.youtube.com/watch?v=civrwBnE0bM"> https://www.youtube.com/watch?v=civrwBnE0bM</a></li>
-      <li>Enfoque de  competencias:<a href="https://www.youtube.com/watch?v=GAh2ZQjhPtM"> https://www.youtube.com/watch?v=GAh2ZQjhPtM</a><u> </u></li>
-      <li>Modelo Pedagógico  Institucional: <a href="https://www.youtube.com/watch?v=7Q1OlQ1edkc">https://www.youtube.com/watch?v=7Q1OlQ1edkc</a><u> </u></li>
-      <li>Ejecución de la  Formación Profesional Integral: <u>https://www.youtube.com/watch?v=USjeQXywM7o</u></li>
-    </ul>
-    <p><u> </u><br />
-      El instructor distribuye por equipos las competencias  del programa de formación. Una vez identificada la competencia, los resultados  de aprendizaje y analizados algunos conceptos relacionados en los videos,  argumente por equipos, con sus propias palabras, por qué considera importante  el abordaje de esta competencia para su formación y desempeño laboral y  socialícela a la ficha.<br />
-  <strong> </strong><br />
-  <strong>PROYECTO  FORMATIVO DEL PROGRAMA</strong></p>
-    <p>A partir de lo trabajado anteriormente, dar respuesta  por equipos a las preguntas planteadas de acuerdo sus percepciones y  conocimientos:</p>
-    <ul>
-      <li>¿Cuál es el nombre del  proyecto formativo?</li>
-      <li>¿Qué problema o  necesidad busca solucionar?</li>
-      <li>¿Cómo se justifica la  ejecución del proyecto?</li>
-      <li>¿Cuáles son los  objetivos del proyecto formativo?</li>
-      <li>¿Cuáles son los  productos o resultados esperados?</li>
-      <li>¿Cuáles son las fases  en las que se ejecuta el proyecto formativo?</li>
-      <li>¿Qué diferencia  encuentra entre el programa de formación y la ruta de aprendizaje del proyecto? </li>
-    </ul>
-    <p>&nbsp;</p>
-    <p>Debemos elaborar un acta en la cual el grupo determina su  proyecto y los aspectos que tuvimos en cuenta para su elección. </p>
-    <p><strong>Evidencia de producto:</strong> Programa de formación presentado por el  instructor. Acta donde se determine el proyecto formativo del equipo  colaborativo de aprendices. Test de inteligencias múltiples, Test de Estilos de  aprendizaje de Kolb y Honey y test de hábitos de estudio diligenciados y  subidos a la plataforma. Cuestionario realizado del reglamento del aprendiz.<br />
-      <strong>Evidencia de producto y conocimiento:</strong> Ensayo que contenga una tabla  de las fortalezas y debilidades que tiene para aprender y estudiar teniendo en  cuenta los resultados hallados con los test de inteligencias múltiples, test  hábitos de estudio y estilos de aprendizaje que dé cuenta del análisis de  los materiales consultados por usted sobre  métodos de estudio en la biblioteca virtual del SENA y los materiales sugeridos  por los instructores que participan en la inducción y se encuentran en la  plataforma. Lectura y comprensión del reglamento del aprendiz.<br />
-      <strong>Evidencia de desempeño:</strong> Conformación de equipo colaborativo para  formular el proyecto formativo del aprendiz. Participación en el foro: ¿De qué  me di cuenta con el desarrollo de las actividades?</p>
-    <p><strong>4. ACTIVIDADES DE EVALUACIÓN</strong></p>
-    <p><strong>&nbsp;</strong></p>
-    <table border="1" cellspacing="0" cellpadding="0" width="636">
-      <tr>
-        <td width="212" valign="top"><p align="center"><strong>Evidencias de Aprendizaje</strong></p></td>
-        <td width="207" valign="top"><p align="center"><strong>Criterios de Evaluación</strong></p></td>
-        <td width="217" valign="top"><p align="center"><strong>Técnicas e Instrumentos de Evaluación</strong></p></td>
-      </tr>
-      <tr>
-        <td width="212" valign="top"><p><strong>Evidencias de Conocimiento:</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>Evidencias de Desempeño:</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>&nbsp;</strong></p>
-          <p><strong>Evidencias de Producto:</strong></p></td>
-        <td width="207" valign="top"><p>Ensayo que    contenga una tabla de las fortalezas y debilidades que tiene para aprender y    estudiar teniendo en cuenta los resultados hallados con los test de    inteligencias múltiples, test hábitos de estudio y estilos de aprendizaje que    dé cuenta del análisis de los materiales consultados por usted sobre métodos    de estudio en la biblioteca virtual del SENA y los materiales sugeridos por    los instructores que participan en la inducción y se encuentran en la    plataforma. Lectura y comprensión del reglamento del aprendiz. </p>
-          <p>Participación en la    construcción del periódico digital con mi grupo colaborativo. </p>
-          <p>Participación en la construcción de la matriz de    empatía &ldquo;me identifico con el SENA&rdquo; de manera colectiva. </p>
-          <h1>Observación de los videos y    aclaración de inquietudes. </h1>
-          <h1>Teniendo en cuenta la    actividad: &ldquo;Métodos de Estudio&rdquo;, elabore una línea de tiempo sobre el tema    adaptando la información a los resultados arrojados en: &ldquo;Hábitos de estudio&rdquo;,    &ldquo;test inteligencias múltiples y &ldquo;formato de identificación de los estilos de    aprendizaje&rdquo;.</h1>
-          <h1>Observar al aprendiz haciendo    uso de las plataformas, blogs y páginas web institucionales como: Sofía plus,    página web del SENA, blog del centro de formación, de la biblioteca virtual    entre otros. Observar el video la importancia del inglés y ver el power point    SENA bilingüe 2016-2018</h1>
-          <p>Conformación de equipo colaborativo para formular el    proyecto formativo del aprendiz. Participación en el foro: ¿De qué me di    cuenta con el desarrollo de las actividades?</p>
-          <p>Elaboración de un periódico digital con mi grupo    colaborativo.<br />
-            Mapa de empatía elaborado por el grupo.</p>
-          <p>Elaborar un manual de instrucciones que indiquen    el paso a paso de ingreso a Sofía Plus y a la plataforma LMS.</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p></td>
-        <td width="217" valign="top"><p>Test de inteligencias múltiples<br />
-          Test de estilos de aprendizaje<br />
-          Test de hábitos de estudio</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>Didáctica activa: línea de    tiempo<br />
-            Rúbrica de línea de tiempo</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>Periódico digital.<br />
-            Cuestionario del reglamento del    aprendiz.</p></td>
-      </tr>
-    </table>
-    <p><strong>&nbsp;</strong></p>
-    <p><strong>&nbsp;</strong></p>
-    <ul>
-      <li><strong>GLOSARIO DE  TERMINOS</strong></li>
-    </ul>
-    <p><strong>              Aprendizaje:</strong> Proceso mediante el cual el aprendiz o alumno comprende,  asimila, asume y aplica conocimientos, habilidades, destrezas y actitudes que  lo hacen competente para actuar técnica, metodológica, participativa y  socialmente en el trabajo. Desde el enfoque de competencias el ambiente de  aprendizaje se encamina a la <strong><em>construcción y apropiación de un saber</em></strong> que pueda ser aplicado en las diferentes situaciones que se le presenten a un  individuo en la vida y las diversas acciones que este puede realizar en la  sociedad.</p>
-    <p><strong>Aprendiz: </strong>Persona, generalmente joven, que aprende algún oficio  practicándolo con alguien que ya lo sabe.   Es toda persona que recibe formación profesional en el SENA. </p>
-    <p><strong>              Ambiente de aprendizaje:</strong> Un ambiente de aprendizaje es un espacio en el que los  estudiantes interactúan, bajo condiciones y circunstancias físicas, humanas,  sociales y culturales propicias, para generar experiencias de aprendizaje  significativo y con sentido. Dichas experiencias son el resultado de  actividades y dinámicas propuestas, acompañadas y orientadas por un docente.<br />
-      <strong>Aprendizaje significativo:</strong>  Se refiere a la posibilidad de establecer  vínculos entre lo que se debe aprender y lo que se sabe, es decir, lo que se  encuentra en la estructura cognitiva de la persona que aprende: sus  conocimientos previos, lo cual proporciona motivación e interés en el aprendiz  para el desarrollo integral competencias.<br />
-      <strong>Competencia: </strong>Conjunto de capacidades  reales de la persona, relacionados con aspectos socio afectivos y con  habilidades cognoscitivas y motrices, que le permiten llevar a cabo una  actividad o función con calidad y se modifican en forma permanente cuando son  sometidas a prueba en la resolución de situaciones concretas, críticas y  públicas.<br />
-      <strong>Convivencia:</strong> se designa con el término  de convivencia a la vida en común que alguien lleva ya sea con una o varias  personas. Prácticamente desde el nacimiento los seres humanos estamos  destinados a la convivencia, primero con nuestros padres, nuestros hermanos,  luego, con el correr de los años y una vez maduros, habiendo hallado a la  persona con la cual queremos compartir nuestra vida y proyectos personales, con  nuestras parejas. También, aunque no compartamos proyectos personales, de  alguna manera, con nuestros amigos y con nuestros compañeros de trabajo tenemos  otra especie de convivencia, pero convivencia al fin, ya que al igual que  cuando se comparte una misma casa, en el trabajo, durante muchas horas se  comparte el mismo espacio físico, entonces, al igual que en casa se deberán  hacer concesiones, surgen disputas por las diferencias y consensos tras las  discusiones, entre otras cuestiones. Página web:<strong> vía Definición ABC </strong><a href="http://www.definicionabc.com/social/convivencia.php"><strong>http://www.definicionabc.com/social/convivencia.php</strong></a><strong>.</strong><br />
-      <strong>Estilo de aprendizaje:</strong> Preferencias o tendencias a utilizar más unas determinadas maneras de aprender  que otras. La utilización de métodos propios o conjunto de estrategias varían  según lo que se quiere aprender, y evolucionan y cambian de modo constante; sin  embargo, cada persona tiende a desarrollar unas preferencias globales para  conseguir un aprendizaje más efectivo.  <br />
-      <strong>Estrategia de aprendizaje:</strong>   Combinación de métodos, medios y mediaciones  didácticas, utilizadas por los Instructores-tutores y Aprendices, para  facilitar el aprendizaje y la obtención de los resultados definidos en el  diseño curricular. <br />
-      <strong>Ensayo:</strong> puede decirse que  el ensayo es un texto escrito en prosa en el cual se analiza un tema específico  y se desarrolla de forma clara, su finalidad es mostrar la perspectiva personal  del autor sobre ese asunto y las razones por las cuales ha llegado a ese modo  de verlo. Página web: Definición de ensayo - Qué es, Significado y Concepto <a href="http://definicion.de/ensayo/#ixzz3fxNCFR8H">http://definicion.de/ensayo/#ixzz3fxNCFR8H</a>.<br />
-      <strong>Evidencias:</strong> Pruebas claras y manifiestas de los conocimientos,  habilidades, destrezas y actitudes que una persona posee, determinan su  aprendizaje, el desarrollo de las competencias y el logro de los resultados de aprendizaje.  Son recolectadas con la orientación del instructor. Permiten reconocer los  logros obtenidos por el aprendiz en términos del saber, saber hacer y ser.<br />
-      <strong>Evidencia de Conocimiento: </strong>Manifestaciones  claras y ciertas sobre el aprendizaje del alumno relacionadas con el saber y  comprender. Incluye el conocimiento de hechos y procesos, la comprensión de  principios, las teorías y las maneras de utilizar y aplicar el conocimiento en  situaciones cotidianas o nuevas.<br />
-      <strong>Evidencia de producto: </strong>Resultados que  se obtienen del desarrollo de una actividad realizada por el aprendiz en la  formación. El producto puede ser un artículo u objeto material, un documento o  un servicio, el cual refleja el aprendizaje alcanzado y permite hacer  inferencias sobre el proceso o método utilizado. <br />
-      <strong>Evidencia de desempeño: </strong>Pruebas del  saber hacer, relativas al cómo el alumno o aprendiz ejecuta un proceso,  actividad y al resultado obtenido, en donde pone en juego sus conocimientos,  habilidades y actitudes.<br />
-      <strong>Foro de Discusión:</strong> o tablón de anuncios  es un área web dinámica que permite que distintas personas se comuniquen. Por  lo general, el foro de discusión se compone de diferentes &quot;hilos&quot; de  discusión (llamados a veces asuntos o temas), cada uno relacionado con un área  de debate diferente. El primer mensaje en un proceso establece el tema de  discusión y los mensajes que siguen (casi siempre debajo del primero) lo  continúan.<br />
-      <strong>Guía de aprendizaje:</strong> Recurso didáctico  que facilita el aprendizaje del alumno o aprendiz. Incluye actividades planeadas  por procesos, diseñada por el o los instructores para promover aprendizajes  significativos, la comprensión y construcción de conocimientos. Se desarrollan  a través de ellas valores, procedimientos cognitivos y motores.<br />
-      <strong>Hábitos de estudio:</strong> son aquellas conductas  que los estudiantes practican regularmente, para incorporar saberes a su  estructura cognitiva. Pueden ser buenos o malos, con consecuencias positivas o  negativas, respectivamente, en sus resultados. Se incorporan con la práctica  continua, y luego se vuelven naturales. Contar con buenos hábitos de estudio,  posibilitarán que una vez que el alumno ya no cuente con la guía permanente de  sus docentes, pueda transformarse en alguien capaz de estudiar por sí solo, que  es lo que se denomina estudiante con autonomía, además de que esos contenidos  se acumulan en su memoria de largo plazo. <br />
-      Página web:  Concepto de hábitos de estudio - Definición en DeConceptos.com<strong> </strong><a href="http://deconceptos.com/ciencias-sociales/habitos-de-estudio#ixzz3fxL4uZWz"><strong>http://deconceptos.com/ciencias-sociales/habitos-de-estudio#ixzz3fxL4uZWz</strong></a><strong>.</strong><br />
-  <strong>Inducción: </strong>La inducción es el proceso  inicial de la formación en el SENA, el cual busca que el aprendiz desarrolle  unas competencias básicas y necesarias para navegar con fluidez en su  aprendizaje. La inducción es un factor clave de éxito en el proceso de  formación; es el punto de partida en el cual el aprendiz reconoce la entidad,  la normatividad y servicios institucionales, así como, el programa de  formación, su proyección laboral y la estrategia de formación y el aprendizaje  que el SENA ofrece.</p>
-    <p><strong>Inteligencia:</strong> es la capacidad de  elegir, entre varias posibilidades, aquella opción más acertada para la  resolución de un problema. En este sentido, cabe distinguirla de la sabiduría,  en tanto que esta última es tan solo una acumulación de conocimiento, mientras  que la inteligencia implica hacer el mejor uso de un saber previo. Página web  vía Definición ABC <a href="http://www.definicionabc.com/general/inteligencia.php">http://www.definicionabc.com/general/inteligencia.php</a>.<br />
-      <strong>Inteligencia múltiple:</strong> Gardner es famoso  por haber propuesto el modelo de inteligencia múltiple, donde afirma que la  inteligencia es un conjunto de capacidades específicas con distinto nivel de  generalidad. Así, la inteligencia deja de ser considerada como algo unitario y  se transforma en una serie de elementos independientes y bien diferenciados.  Lee todo en: Definición de inteligencia múltiple - Qué es, Significado y  Concepto <a href="http://definicion.de/inteligencia-multiple/#ixzz3fxJW0TYF">http://definicion.de/inteligencia-multiple/#ixzz3fxJW0TYF</a>.<br />
-      <strong>LMS:</strong> (Learning Managment System), para  desarrollar cursos en línea o la denominada formación a través de Ambientes  Virtuales de Aprendizaje.<br />
-      <strong>Matrícula:</strong> Es la formalización del  sujeto de formación, la entrega de documentos y cumplimiento de requisitos en  una institución educativa.<br />
-      <strong>Reglamento de aprendices: </strong>constituye la  base mínima para la convivencia de todos los aprendices del SENA, incluidos los  que se desarrollan por Internet.<br />
-      <strong>Resultado de aprendizaje: </strong>Indicadores relacionados con la  competencia que orientan al instructor y aprendiz para la verificación de los  procesos cognitivos, motores, valorativos, actitudinales y de apropiación de  los conocimientos científicos y tecnológicos requeridos en el aprendizaje. </p>
-    <p><strong>Rúbrica: </strong>resulta ser una herramienta de  calificación mayormente utilizada para realizar evaluaciones subjetivas  respecto de una cuestión. Consiste en una serie de criterios y estándares  ligados a los objetivos de aprendizaje y usados por profesores y expertos a la  hora de tener que evaluar la actuación de los alumnos respecto de la creación  de artículos, ensayos u otros proyectos. Página web: vía Definición ABC <a href="http://www.definicionabc.com/general/rubrica.php">http://www.definicionabc.com/general/rubrica.php</a>.</p>
-    <p><strong>SENA:</strong> El Servicio Nacional de  Aprendizaje, SENA, es la institución pública colombiana encargada de la función  que le corresponde al Estado de invertir en el desarrollo social y técnico de  los colombianos ofreciendo y ejecutando la Formación Profesional gratuita, para  la incorporación y el desarrollo de las personas en actividades productivas que  contribuyan al desarrollo social, económico y tecnológico del país. El SENA es  la principal institución del Sistema Nacional de Formación para el Trabajo.<br />
-      <strong>Sofía plus:</strong> La sigla significa <em>Sistema Optimizado para la Formación y el  Aprendizaje Activo</em>. En el año 2009 empezará a operar el aplicativo  denominado SOFIA PLUS, como la principal herramienta para facilitar la gestión  de los nuevos procesos formativos en el SENA. La operación del sistema requiere  la interacción de tres componentes importantes: el entendimiento y adopción de  los nuevos procesos de gestión del aprendizaje, la prueba y uso del aplicativo  diseñado para la gestión de estos nuevos procesos, y la migración de  información útil del actual aplicativo de gestión académica de centros hacia el  nuevo aplicativo que soportará todos los procesos.<br />
-      <strong>Tics:</strong> son un conjunto de servicios,  redes, software y dispositivos que tienen como fin la mejora de la calidad de  vida de las personas dentro de un entorno, y que se integran a un sistema de  información interconectado y complementario.</p>
-    <ul>
-      <li><strong>REFERENTES  BIBLIOGRAFICOS</strong></li>
-    </ul>
-    <p><strong>&nbsp;</strong></p>
-    <p><em>Lopera R.  Estella. Gutiérrez C Ruth, Arteaga Z. Rubén Darío, Gaviria Aldemar.  Metodologías de Estudio. Ed Universidad de Antioquia. Medellín. 2010.</em><br />
-      <br />
-      <em>Barriga A.  Frida. Estrategias Docentes para un Aprendizaje Significativo. Ed MC Graw Hill.  México. 2010.</em></p>
-    <p><em>Boeglin N.  Martha. Leer y Redactar en la Universidad. Ed. Mad.S.L. Sevilla, España. 2008.</em></p>
-    <p><em>SENA.  Formación Abierta y a Distancia. Cartilla Aprendamos a Aprender. Bogotá 1983. </em></p>
-    <p><em>Restrepo  Trinidad y Zuluaga Clara Guía de aprendizaje Inducción, Tecnólogo en Guianza  Turística modalidad semi-presencial. Centro de la Innovación la Agroindustria y  la Aviación. Año 2015-2017. Regional Antioquia.</em></p>
-    <p><em>Equipo de  asesores pedagógico del CIAA.  Guía de  aprendizaje Inducción. Centro de la Innovación la Agroindustria y la Aviación.  Año 2014. Regional Antioquia</em></p>
-    <p><strong>&nbsp;</strong></p>
-    <ul>
-      <li><strong>CONTROL DEL  DOCUMENTO</strong></li>
-    </ul>
-    <table border="1" cellspacing="0" cellpadding="0" width="650">
-      <tr>
-        <td width="83" valign="top"><p><strong>&nbsp;</strong></p></td>
-        <td width="180" valign="top"><p><strong>Nombre</strong></p></td>
-        <td width="104" valign="top"><p><strong>Cargo</strong></p></td>
-        <td width="113" valign="top"><p><strong>Dependencia</strong></p></td>
-        <td width="170" valign="top"><p><strong>Fecha</strong></p></td>
-      </tr>
-      <tr>
-        <td width="83" valign="top"><p><strong>Autor (es)</strong></p></td>
-        <td width="180" valign="top"><p>Trinidad Patricia Restrepo    Montoya.<br />
-          Claudia Vanegas <br />
-          Juan Pablo Dueñas <br />
-          Clara Zuluaga</p>
-          <p>Marisol Dávila Sánchez</p>
-          <p>Hugo García<strong></strong></p></td>
-        <td width="104" valign="top"><p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>Instructores SENA-CIAA Rionegro    Antioquia</p></td>
-        <td width="113" valign="top"><p>&nbsp;</p>
-          <p>Turismo y gastronomía</p>
-          <p>&nbsp;</p>
-          <p>Agroindustria</p>
-          <p>Equipo Pedagógico</p></td>
-        <td width="170" valign="top"><p><strong>Abril 2 de 2017</strong></p></td>
-      </tr>
-    </table>
-    <p><strong>&nbsp;</strong></p>
-    <ul>
-      <li><strong>CONTROL DE CAMBIOS </strong>(diligenciar  únicamente si realiza ajustes a la guía)</li>
-    </ul>
-    <p>&nbsp;</p>
-    <table border="1" cellspacing="0" cellpadding="0" width="650">
-      <tr>
-        <td width="83" valign="top"><p><strong>&nbsp;</strong></p></td>
-        <td width="191" valign="top"><p><strong>Nombre</strong></p></td>
-        <td width="95" valign="top"><p><strong>Cargo</strong></p></td>
-        <td width="102" valign="top"><p><strong>Dependencia</strong></p></td>
-        <td width="78" valign="top"><p><strong>Fecha</strong></p></td>
-        <td width="102" valign="top"><p><strong>Razón del Cambio</strong></p></td>
-      </tr>
-      <tr>
-        <td width="83" valign="top"><p><strong>Autor (es)</strong></p></td>
-        <td width="191"><p>Gloria Patricia Tabares Londoño<br />
-          Lyddia Patricia Gómez Correa<br />
-          Andrés Felipe Patiño Bedoya<br />
-          Pablo Andrés Castro López<br />
-          Juan Carlos Restrepo Ruiz<br />
-          Herney Alberto Arango Tabares<br />
-          Edin Fernando Gutiérrez <br />
-          Roberto Rios Urrea<br />
-          Manuel Caicedo Torres<br />
-          Vilma García Vanegas<br />
-          Beatriz Jaramillo </p></td>
-        <td width="95" valign="top"><p>Instructor(a)</p></td>
-        <td width="102" valign="top"><p>Gestión y Desarrollo Empresarial</p></td>
-        <td width="78" valign="top"><p>Enero de 2020</p></td>
-        <td width="102" valign="top"><p>Ajustes según directrices de    Dirección General</p></td>
-      </tr>
-    </table>
-    <br clear="all" />
-    <div>
-      <div id="ftn1">
-        <p><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"> </a> Citado en el  título Marco General de la Inducción en el documento Inducción programa de  formación a distancia Tecnólogo en Guianza Turística, elaborado por  instructores del Centro de la Innovación, la Agroindustria y el Turismo,  Rionegro, Abril de 2015. Pág. 5</p>
-      </div>
-    </div>
-  </div>
-  <!-- end .container --></div>
+<div class="navigation col-lg-12">
+	<p align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+	<img border="0" src="index.3.jpg" width="326" height="112"></p>
+	<div>
+		<p class="MsoNormal" align="center" style="line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%; font-weight: 700">PROCESO DIRECCIÓN DE FORMACIÓN PROFESIONAL 
+INTEGRAL </span></p>
+		<p class="MsoNormal" align="center" style="line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%; font-weight: 700">FORMATO GUÍA DE APRENDIZAJE</span></p>
+
+		<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family:Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+		&nbsp;&nbsp;&nbsp; <b>IDENTIFICACIÓN DE LA GUÍA DE APRENDIZAJE</b></span></p>
+		<ul>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+			Denominación del Programa de Formación: TECNÓLOGO EN ELECTROMECÁNICA 
+			INDUSTRIAL</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+			Código del Programa de Formación: 223201</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+			Nombre del Proyecto: Gestión de mantenimiento electromecánico 
+			industrial</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+			Fase del Proyecto: Análisis y Fundamentación</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">Actividad de Proyecto<span style="font-family: Arial,sans-serif; line-height: 115%; font-size:16pt">:&nbsp;Sistemas 
+			de control y automatización &nbsp;&nbsp;
+			</span></span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+			Competencia: Corregir de un bien eléctrico de acuerdo a sus 
+			especificaciones tecnica</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+			Resultados de Aprendizaje Alcanzar:</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+			Duración de la Guía: 100 Horas</span></li>
+		</ul>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt; font-weight:700">
+		&nbsp;&nbsp;&nbsp; 
+PRESENTACIÓN:</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="line-height: 115%; font-family: Arial,sans-serif; font-size: 16pt">
+		Esta guía se constituye en un documento&nbsp; orientador de tu proceso de 
+		formación, por lo tanto se recomienda:</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">-&nbsp;
+		</span>
+		<span style="line-height: 115%; font-family: Arial,sans-serif; font-size: 16pt">&nbsp; 
+		Leerla, comprenderla y aplicarla antes de realizar cualquier acción.</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">-</span><span style="line-height: 115%; font-family: Arial,sans-serif; font-size: 16pt">&nbsp;&nbsp;&nbsp; 
+		El tiempo para la entrega de actividades será de acuerdo al plan de 
+		formación. </span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">-</span><span style="line-height: 115%; font-family: Arial,sans-serif; font-size: 16pt">&nbsp;&nbsp;&nbsp; 
+		Las actividades iniciales de la guía podrán ser grupales, pero la 
+		elaboración de los productos será individual.</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">-</span><span style="line-height: 115%; font-family: Arial,sans-serif; font-size: 16pt">&nbsp;&nbsp;&nbsp; 
+		Revise la bibliografía sugerida para ampliar sus conocimientos</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">-</span><span style="line-height: 115%; font-family: Arial,sans-serif; font-size: 16pt">&nbsp;&nbsp;&nbsp; 
+		Las evidencias de conocimiento se tomarán de acuerdo al desarrollo de la 
+		guía.</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%; font-weight: 700">&nbsp;&nbsp;&nbsp; 
+		<span style="line-height: 115%; font-family: Arial,sans-serif; font-size:16pt">
+		FORMULACIÓN DE LAS ACTIVIDADES DE APRENDIZAJE</span></span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">&nbsp;&nbsp;
+		&nbsp;Simulación 
+y diseño de sistemas de control usando lógica cableada y PLC logo, en CADEsimu y 
+herramienta de diseño GRAFCET.</span></p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">1.&nbsp;&nbsp;&nbsp;&nbsp;
+		Que es CadeSimu? Como se compone el entorno de Trabajo CADEsimu?</span></b></span></p>
+		<p class="MsoNormal" style="margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p>
+		<blockquote>
+			<p class="MsoNormal" style="text-align: justify; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			CADE_SIMU es un programa de CAD electrotécnico que permite insertar 
+			los distintos símbolos organizados en librerías y trazar un esquema 
+			eléctrico de una forma fácil y rápida para posteriormente realizar 
+			la simulación. El programa en modo simulación visualiza el estado de 
+			cada componente eléctrico cuando esta activado al igual que resalta 
+			los conductores eléctricos sometidos al paso de una corriente 
+			eléctrica. Por medio del interfce CAD el usuario dibuja el esquema 
+			de forma fácil y rápida. Una vez realizado el esquema por medio de 
+			la simulación se puede verificar el correcto funcionamiento.</span></p>
+			<p class="MsoNormal" style="text-align:justify; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			Actualmente dispone de las siguientes librerías de simulación:</span></p>
+			<p class="MsoNormal" style="text-align:justify; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			&nbsp;</p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Alimentaciones tanto de CA como de CC.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Fusibles y seccionadores.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Interruptores automáticos, interruptores diferenciales, relé 
+			térmico, y disyuntores.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Contactores e interruptores de potencia.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Motores eléctricos.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Variadores de velocidad para motores de CA y CC.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Contactos auxiliares y contactos de temporizadores.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Contactos con accionamiento, pulsadores, setas, interruptores, 
+			finales de carrera y contactos de relés térmicos.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Bobinas, temporizadores, señalizaciones ópticas y acústicas.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Detectores de proximidad y barreras fotoeléctricas.</span></p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+			* Conexionado de cables unipolares y tripolares, mangueras y 
+			regletas de conexión.</span></p>
+			<p class="MsoNormal" style="text-align:justify; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			&nbsp;</p>
+			<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+			<span style="font-family: Arial,sans-serif; font-size: 16pt">En el 
+			siguiente video se muestra el entorno de trabajo de CADEsimu:</span></p>
+		</blockquote>
+
+		<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="entornocadesimu.mp4" ></video> </div>
+
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+2.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Fuentes de alimentación </b> </span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">El programa 
+		CADEsimu cuenta con las fuentes de alimentación suficientes para 
+		cualquier montaje de automatización industrial, desde&nbsp; energía en 
+		AC hasta DC, desde 110V a 330V en alterna hasta fuentes de alimentación 
+		en DC variables.</span></p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">En el 
+		siguiente video se muestra las fuentes de alimentcion de CADEsimu:</span></p>
+		
+		
+		<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="Alimentaciones.mp4" ></video> </div>
+   <p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><b>&nbsp;&nbsp;&nbsp; 
+3.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Fusibles y Seccionadores </b></i> </span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;line-height:200%; margin-left:60px; margin-top:0" align="justify">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;<b>&nbsp;&nbsp; 
+		Fusibles:</b> El fusible eléctrico, denominado inicialmente aparato de 
+		energía y de protección contra sobrecarga de corriente eléctrica por 
+		fusión, es el dispositivo más antiguo de protección contra posibles 
+		fallos en circuitos eléctricos, apareciendo las primeras citas 
+		bibliográficas en el año 1774, momento en el que se le empleaba para 
+		proteger a condensadores de daños frente a corrientes de descarga de 
+		valor excesivo. Durante la década de 1880 es cuando se reconoce su 
+		potencial como dispositivo protector de los sistemas eléctricos, que 
+		estaban recién comenzando a difundirse. Desde ese momento, hasta la 
+		actualidad, los numerosos desarrollos y la aparición de nuevos diseños 
+		de fusibles han avanzado al paso de la tecnología, y es que, a pesar de 
+		su aparente simplicidad, este dispositivo posee en la actualidad un muy 
+		elevado nivel tecnológico, tanto en lo que se refiere a los materiales 
+		usados como a las metodologías de fabricación. El fusible coexiste con 
+		otros dispositivos protectores, dentro de un marco de cambios 
+		tecnológicos muy acelerados que lo hacen aparecer como pasado de moda u 
+		obsoleto, lo que no es así.<br>
+		<br>
+		Este concepto se entiende con mayor facilidad cuando se describe el 
+		campo de aplicación actual, cuyos parámetros nominales poseen rangos muy 
+		amplios. Las tensiones de trabajo van desde unos pocos voltios hasta 132 
+		kV; las corrientes nominales, desde unos pocos mA hasta 6 kA y las 
+		capacidades de ruptura alcanzan en algunos casos los 200 kA. 
+		</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;line-height:200%; margin-left:60px; margin-top:0" align="center">
+		<img border="0" src="fusibles.jpg" width="835" height="520"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;line-height:200%; margin-left:60px; margin-top:0" align="justify">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;line-height:200%; margin-left:60px; margin-top:0" align="justify">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; font-weight: 700">
+		Seccionadores: </span></p>
+		<p style="box-sizing: border-box; font-size: 0.75rem; font-family: Helvetica, Arial, Verdana, Geneva, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; line-height: 200%; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0; background-color: rgb(255, 255, 255)" align="justify">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height: 115%">
+		Los Interruptores Seccionadores son dispositivos mecánicos de maniobra 
+		capaces de seccionar un circuito eléctrico, desarrollados según las 
+		normas vigentes para cumplir con las normas internacionales IEC 60947-1 
+		y 3.</span></p>
+		<p style="box-sizing: border-box; font-size: 0.75rem; font-family: Helvetica, Arial, Verdana, Geneva, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; line-height: 200%; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0; background-color: rgb(255, 255, 255)" align="justify">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height: 115%">
+		La construcción y el diseño vuelven a los interruptores compactos, 
+		seguros y altamente confiables, lo que disminuye la frecuencia de 
+		mantenimiento. Combinados con las modernas técnicas de fabricación, 
+		estos interruptores son de poliamida. Poseen una excelente resistencia a 
+		la tracción, aislamiento para prevenir el arco voltaico entre las fases 
+		y soportan corrientes de cortocircuito en las más severas condiciones.</span></p>
+		<p style="box-sizing: border-box; font-size: 0.75rem; font-family: Helvetica, Arial, Verdana, Geneva, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; line-height: 200%; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0; background-color: rgb(255, 255, 255)" align="center">
+		<img src="https://ab.rockwellautomation.com/resources/images/allenbradley/gl/medlrgprod/194E_IECLoadSwitchFamily_front1--large_312w255h.jpg" alt="Interruptores de carga IEC" width="551" height="453"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;line-height:200%; margin-left:60px; margin-top:0" align="justify">
+		&nbsp;</p>
+      
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp; 
+4.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Automáticos - disyuntores </b> </span></p>
+		<p class="MsoNormal" style="margin-top:0;margin-bottom:0cm;
+margin-left:60px;margin-bottom:0;text-align:left;line-height:200%">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		</div></div>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+justify;line-height:200%; margin-left:60px; margin-top:0">
+<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>&nbsp; Interruptores Automáticos: </b>&nbsp;Estos dispositivos se utilizan 
+para proteger contra cortocircuitos, así como también para proteger contra 
+sobrecargas, corrientes de defecto y tensiones bajas. De esta manera, asumen la 
+protección de equipos eléctricos contra sobrecalentamiento inadmisible.y disyuntores</span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+center;line-height:200%; margin-left:60px; margin-top:0">
+<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">
+<img border="0" src="tipos-de-magnetotermicos.jpg" width="634" height="417">
+</span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+justify;line-height:200%; margin-left:60px; margin-top:0">
+<font face="Arial,sans-serif" style="font-size: 16pt"><b>Interruptor 
+termomagnético :</b> Los interruptores automáticos protectores de motor, también 
+llamados interruptores termomagnéticos, son dispositivos destinados para la 
+maniobra, protección y seccionamiento de circuitos con cargas motrices 
+primordialmente. Protegen simultáneamente estos motores contra la destrucción 
+por arranque bloqueado, sobrecarga, cortocircuito y avería de un conductor 
+externo en redes trifásicas.</font></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+justify;line-height:200%; margin-left:60px; margin-top:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+center;line-height:200%; margin-left:60px; margin-top:0">
+<img border="0" src="termoma.jpg" width="500" height="500"></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+justify;line-height:200%; margin-left:60px; margin-top:0"><b>
+<span style="font-family: Arial,sans-serif; font-size: 16pt">G</span></b><span style="font-size: 16pt; font-family: Arial,sans-serif; line-height: 115%"><b>uardamotor:</b> 
+es un interruptor magnetotérmico, especialmente diseñado para la protección de 
+motores eléctricos. Este diseño especial proporciona al dispositivo una curva de 
+disparo que lo hace más robusto frente a las sobreintensidades transitorias 
+típicas de los arranques de los motores. El disparo magnético es equivalente al 
+de otros interruptores automáticos pero el disparo térmico se produce con una 
+intensidad y tiempo mayores.</span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+center;line-height:200%; margin-left:60px; margin-top:0">
+<span style="font-family: Arial,sans-serif; font-size: 16pt">&nbsp;</span><img src="https://sites.google.com/site/elictricidadchandias/_/rsrc/1470941028596/interruptor-automatico-magnetotermico/disyuntor-magnetotermico-6-10a-ref-gv2me14_1208567.jpg?height=320&width=200" alt="Guardamotor - Controles Automáticos Electricos"></p>
+<div class="navigation col-lg-12">
+	<div>
+		<p class="MsoListParagraphCxSpFirst" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;&nbsp; 
+5.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Contactores e Interruptores</b></span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt"><b>
+		Contactor</b>: Es un aparato eléctrico de mando a distancia, que puede 
+		cerrar o abrir circuitos, ya sea en vacío o en carga. Es la pieza clave 
+		del automatismo en el motor eléctrico.<br>
+		Su principal aplicación es la de efectuar maniobras de apertura y cierra 
+		de circuitos eléctricos relacionados con instalaciones de motores. 
+		Excepto los pequeños motores, que son accionados manualmente o por relés, 
+		el resto de motores se accionan por contactores.<br>
+		Un contactor está formado por una bobina y unos contactos, que pueden 
+		estar abiertos o cerrados, y que hacen de interruptores de apertura y 
+		cierre de la corriente en el circuito.</span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<img src="https://i2.wp.com/automatismoindustrial.com/wp-content/uploads/2012/10/contactor1.jpg" alt="El contactor. | Formación para la Industria 4.0"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span><span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%; font-weight:700"> </span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%; font-weight:700">
+		Interruptores pulsadores: </span>
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">
+		Son dispositivos auxiliares de mando provistos de un elemento destinado 
+		a ser accionado por la fuerza ejercida por una parte del cuerpo humano, 
+		generalmente el dedo o la palma de la mano y que tiene una energía de 
+		retorno acumulada (resorte). </span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+center;line-height:200%; margin-left:60px; margin-top:0">
+		<img border="0" src="BOTONES%20PULSADORES%20BOTONERAS%20Y%20ACCESORIOS.jpg" width="800" height="324"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;line-height:200%; margin-left:60px; margin-top:0" align="justify">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">
+		<b>Botones giratorios: </b>De dos o tres posiciones mantenidas con 
+		retorno automático y cero (selección de circuitos o de un tipo de 
+		marcha: marcha manual, automática y parada sobre un equipo compresor o 
+		bomba, por ejemplo).<br>
+		<br>
+		Cuando el mando se realiza por llave (extraíble o enclavada en ciertas 
+		posiciones) solamente la persona autorizada puede realizar la maniobra.</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+center;line-height:200%; margin-left:60px; margin-top:0">
+		<img border="0" src="unnamed.jpg" width="503" height="506"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+justify;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height: 115%">
+		<b>INTERRUPTORES DE POSICIÓN O “FINAL DE CARRERA” O “LIMIT SWITCH”</b> 
+		:Los contactos de mando mecánico son utilizados para controlar la 
+		posiciónde una máquina, permitiendo la puesta en marcha, la disminución 
+		de velocidad o la parada en un sitio determinado o para mandar ciclos de 
+		funcionamiento automático en las máquinas modernas.</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+center;line-height:200%; margin-left:60px; margin-top:0">
+		<img border="0" src="FC_posicion.jpg" width="741" height="362"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp; 
+		</span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+6.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Motores</b></span></p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<font face="Arial,sans-serif" style="font-size: 16pt">Un motor es la 
+		parte sistemática de una máquina capaz de hacer funcionar el sistema, 
+		transformando algún tipo de energía (eléctrica, de combustibles fósiles, 
+		etc.), en energía mecánica capaz de realizar un trabajo. En los 
+		automóviles este efecto es una fuerza que produce el movimiento.</font></p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<font face="Arial,sans-serif" style="font-size: 16pt">Un motor bifásico 
+		es un sistema de dos tensiones desfasadas 90 grados, que ya no se 
+		utiliza hoy en día. El alternador está formado por dos devanados 
+		colocados 90 grados uno respecto del otro.<br>
+		Requieren 2 líneas de corriente y una de tierra que trabajan en 2 fases. 
+		Una sube la corriente a 240v para el movimiento y la otra mantiene la 
+		fluidez de la corriente para el uso del motor.</font></p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<font face="Arial,sans-serif" style="font-size: 16pt">Un motor trifásico 
+		es una máquina eléctrica que transforma energía eléctrica en energía 
+		mecánica por medio de interacciones electromagnéticas. Algunos de los 
+		motores eléctricos son reversibles, pueden transformar energía mecánica 
+		en energía eléctrica funcionando como generadores.<br>
+		<br>
+		Funcionan a través de una fuente de potencia trifásica. Son impulsados 
+		por tres corrientes alternas de la misma frecuencia, los cuales alcanzan 
+		sus valores máximos de forma alternada. Poseen una potencia de hasta 
+		300KW y velocidades entre 900 y 3600 RPM.<br>
+		<br>
+		Para transmitirse se utilizan líneas de 3 conductores, pero para 
+		utilización final se utilizan líneas de 4 hilos, que son las 3 fases y 
+		el neutro.</font></p>
+		<p class="MsoListParagraph" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;En 
+		el siguiente video se muestran los tipos de interruptores, interruptores 
+		automáticos, disyuntores, Contactares y Motores que cuenta el CADEsimu y 
+		su respectivo funcionamiento</span></p>
+
+<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="INTERRUPTORESTERMO.mp4" ></video> </div>
+      
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">En este 
+		video se muestra el montaje en CADEsimu la simulación de un arranque 
+		directo de un motor monofásico y trifásico explicando el circuito de 
+		fuerza y el de control al igual que las partes físicas que lo componen y 
+		como se interconectan</span></p>
+					<p align="justify" style="margin-left: 60px">
+		&nbsp;</p>
+ 
+
+
+<div class="centrado"> <video  id="videoarea" controls="controls" poster="" src="ArranquesDirectoCadeSimuMontajeFisico.mp4" ></video> </div>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;&nbsp; 
+7.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Contactos y Accionamientos</b></span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp; </span></p>
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">&nbsp;A 
+		continuación se&nbsp; muestra los&nbsp; contactos y accionamientos con 
+		que cuenta el programa CADEsimu:</span></p>
+		
+		<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="CONTACTOS.mp4" ></video> </div>
+      
+
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+      
+
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp; 
+8.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Sensores : Inductivos, Capacitivo e Infrarojo </b> </span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">&nbsp;A 
+		continuación se&nbsp; muestra los&nbsp; sensores capacitivos e 
+		infrarojos con que cuenta el programa CADEsimu:</span><span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%"> </span></p>
+
+<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="SENSORES.mp4" ></video> </div>
+      
+
+
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<b>9.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Bobinas de Contactores, </b> </span>
+		<b>
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%"><span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;</span>Temporizadores: Ton y Tof, 
+		electrovalvulas</span></b></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+		A continuación se&nbsp; muestra las </span>
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">Bobinas de Contactores, Temporizadores Ton, Temporizadores Tof y 
+		Electroválvulas </span>
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+		con que cuenta el programa CADEsimu</span></p>
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+
+<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="BOBINASDECONTACTORES.mp4" ></video> </div>
+
+
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+		
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoListParagraphCxSpFirst" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<b>10.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;
+		</span>Compuertas Lógicas&nbsp; AND (multiplicación), OR</b></span><b><span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">(suma)</span><span style="font-family: Arial,sans-serif; font-size: 16pt"> 
+		y </span>
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;NOT 
+		(negación o complemento)</span></b></p>
+		<p class="MsoListParagraphCxSpFirst" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">En los 
+		siguientes videos se explica las las compuertas AND, OR , NOT. En el 
+		video se habla de PUERTAS LÓGICAS que es lo mismo que compuertas 
+		lógicas.&nbsp; En las explicaciones en formación usaremos el termino 
+		COMPUERTAS LOGICAS.</span></p>
+		
+		<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="compuertaAND.mp4" ></video> </div>
+
+
+<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="compuertaOR.mp4" ></video> </div>
+
+
+<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="compuertaNOT.mp4" ></video> </div>
+
+
+		<p class="MsoListParagraphCxSpFirst" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraphCxSpFirst" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoListParagraphCxSpMiddle" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+11.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;
+		</span>&nbsp;Logica Digital, FUP y KOP</b></span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">
+		<br>
+		FUP se trata de programación basada en <b>bloques lógicos del estilo 
+		«OR» «AND» </b>etc. Su nombre viene de la palabra germana Funktionsplan 
+		que viene a decir diagrama de funciones.<br>
+		<br>
+		Como puedes observar en la imagen la idea es ir intercalando bloques 
+		lógicos de forma gráfica.<br>
+		<br>
+		La parte positiva es que de un vistazo ves gran parte del programa pero 
+		por contra dependiendo de lo complicado que sea este, se puede hacer un 
+		poco engorroso el controlar que interactúa con qué como seguramente 
+		veremos más adelante.</span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: center; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<img border="0" src="fup.png" width="572" height="429"></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: center; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+		Finalmente hay una mayor curva de aprendizaje para la gente proveniente 
+		del sector eléctrico clásico ya que seguramente se sentirán más cómodos 
+		usando KOP como vemos a continuación.</span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<h3 style="padding: 0px; margin: 25px 0px 10px; outline: none; list-style: none; border: 0px none; font-weight: normal; line-height: 1em; font-family: Helvetica; color: rgb(51, 51, 51); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+		<strong style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		KOP</strong></h3>
+		<p style="outline: none; list-style-type: none; color: rgb(51, 51, 51); font-family: 'Droid Sans', Arial, Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; line-height: 200%; border: 0px none; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 1em; padding-bottom: 1em; background-color: rgb(255, 255, 255)">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">
+		Se trata de una programación por diagrama de contactos (Kontaktplan) 
+		y&nbsp;proviene de la forma de representación de contactos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		eléctricos.</span></p>
+		<p style="outline: none; list-style-type: none; color: rgb(51, 51, 51); font-family: 'Droid Sans', Arial, Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: center; line-height: 200%; border: 0px none; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 1em; padding-bottom: 1em; background-color: rgb(255, 255, 255)">
+		<img border="0" src="kop.png" width="904" height="244"></p>
+		<p style="outline: none; list-style-type: none; color: rgb(51, 51, 51); font-family: 'Droid Sans', Arial, Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; line-height: 200%; border: 0px none; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 1em; padding-bottom: 1em; background-color: rgb(255, 255, 255)">&nbsp;</p>
+		<p style="outline: none; list-style-type: none; color: rgb(51, 51, 51); font-family: Arial,sans-serif; font-size: 16pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: center; line-height: 200%; border: 0px none; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 1em; padding-bottom: 1em; background-color: rgb(255, 255, 255)">
+		En el siguiente video se muestra un acercamiento de que es FUG Y KOP y 
+		un breve acercamiento a LOGOsoft</p>
+		
+		<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="FUPyKOP.mp4" ></video> </div>
+
+
+		
+		<p style="outline: none; list-style-type: none; color: rgb(51, 51, 51); font-family: Arial,sans-serif; font-size: 16pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: center; line-height: 200%; border: 0px none; margin-left: 60px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 1em; padding-bottom: 1em; background-color: rgb(255, 255, 255)">&nbsp;</p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: justify; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">A 
+		continuación se muestra imagen comparativa de las LÓGICA DIGITAL</span><span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">, 
+		KOP (Ladder) y la FUP.</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;line-height:200%; margin-left:60px; margin-top:0" align="center">
+		<img border="0" src="COMPARATIVA.jpg" width="944" height="1353"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">A 
+		continuación se muestra una tabla comparativa de los diversos símbolos 
+		según los diferentes metodos</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+center;line-height:200%; margin-left:60px; margin-top:0">
+		<img border="0" src="tablaequivalencias.png" width="1056" height="558"></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+11.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;
+		</span>Plc Logo entradas y&nbsp; Salidas KOP Ladder</span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">En el 
+		siguiente video se explica el uso de un PLC logo con KOP, haciendo uso 
+		de las entradas y salidas</span></p>
+		
+		<div class="centrado"> 
+			<p class="MsoNormal" style="text-align: left; margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0"> <video  id="videoarea" controls="controls" poster="" src="LOGOCEROentradas_salidas.mp4" ></video> </div>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		12.<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;
+		</span>PLC Retención FUP Bloques Lógicos</span></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">En la 
+		siguiente grafica se encontrara la comparación entre las diversas formas 
+		de realizar una retención según la tecnología utilizada</span></p>
+		<p class="MsoListParagraph" style="text-align: center; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<img border="0" src="COMPARATIVA_RETENCION.png" width="651" height="1048"></p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;
+		</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">En el 
+		siguiente video se realiza el montaje de&nbsp; la retención en FUP</span></p>
+		
+					<p align="justify" style="margin-left: 60px">
+		&nbsp;</p>
+ 
+
+
+<div class="centrado"> <video  id="videoarea" controls="controls" poster="" src="VIDEO2 CADE_SIMU.mp4" ></video> </div>
+		
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt">En el 
+		siguiente video se muestra la simulación de un plc logo 8 programado con 
+		KOP LADDER y se realiza el arranque de un motor trifásico.</span></p> 
+					<p align="justify" style="margin-left: 60px">
+		&nbsp;</p>
+ 
+
+
+<div class="centrado"> <video  id="videoarea" controls="controls" poster="" src="logo-arranque_directo_logica_contactosKOP.mp4" ></video> </div>
+		
+		
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">&nbsp;</div>
+		<p class="MsoListParagraph" style="text-align: left; line-height: 200%; margin-left: 60px; margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;<img border="0" src="index.2.jpg" width="1099" height="137"></span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp;</span></p>
+		<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: medium none">
+			<tr style="height: 27.7pt">
+				<td valign="top" style="height: 27.7pt; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm; background: #A6A6A6">
+				<p class="MsoNormal" align="center" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Evidencias de Aprendizaje</span></td>
+				<td width="207" valign="top" style="width: 155.0pt; height: 27.7pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm; background: #A6A6A6">
+				<p class="MsoNormal" align="center" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Criterios de Evaluación</span></td>
+				<td width="217" valign="top" style="width: 163.0pt; height: 27.7pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm; background: #A6A6A6">
+				<p class="MsoNormal" align="center" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Técnicas e Instrumentos de Evaluación</span></td>
+			</tr>
+			<tr>
+				<td valign="top" style="border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Evidencias de Conocimiento :</span></p>
+				<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Evidencias de Desempeño</span></p>
+				<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Evidencias&nbsp; de Producto:</span></td>
+				<td width="207" valign="top" style="width: 155.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;Cuestionario</span><p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-family: Arial,sans-serif; font-size: 16pt">
+				Lista de Chequeo</span></td>
+				<td width="217" valign="top" style="width: 163.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" align="center" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+			</tr>
+		</table>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0;text-align:
+left;line-height:200%; margin-left:60px; margin-top:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height:115%">&nbsp;</span></p>
+		<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">5. GLOSARIO DE TÉRMINOS</span></p>
+		<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">6. REFERENTES BILBIOGRÁFICOS</span></p>
+		<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Construya o cite documentos de apoyo para el desarrollo de la guía, según lo 
+establecido en la guía de desarrollo curricular</span></p>
+		<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">7. CONTROL DEL DOCUMENTO</span></p>
+		<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></p>
+		<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="650" style="width: 487.35pt; border-collapse: collapse; border: medium none">
+			<tr>
+				<td width="83" valign="top" style="width: 62.1pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;Autor </span></td>
+				<td width="180" valign="top" style="width: 134.7pt; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; marginArial,sans-serif">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Cargo</span></span></td>
+				<td width="113" valign="top" style="width: 3.0cm; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Dependencia</span></td>
+				<td width="170" valign="top" style="width: 127.55pt; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Fecha</span></td>
+			</tr>
+			<tr>
+				<td width="83" valign="top" style="width: 62.1pt; border-left: 1.0pt solid black; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">
+				JHONN SUACHA</span></td>
+				<td width="180" valign="top" style="width: 134.7pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;INSTRUCTOR</span></td>
+				<td width="104" valign="top" style="width: 77.95pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;SENA</span></td>
+				<td width="113" valign="top" style="width: 3.0cm; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+				<td width="170" valign="top" style="width: 127.55pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+			</tr>
+		</table>
+		<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></p>
+		<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-family: Arial,sans-serif; font-size: 16pt; line-height: 115%">8. CONTROL DE CAMBIOS 
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">(diligenciar únicamente si realiza ajustes a la guía)</span></span></p>
+		<p class="MsoNormal" align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></p>
+		<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="650" style="width: 487.35pt; border-collapse: collapse; border: medium none">
+			<tr>
+				<td width="83" valign="top" style="width: 62.1pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+				<td width="180" valign="top" style="width: 134.7pt; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Nombre</span></td>
+				<td width="104" valign="top" style="width: 77.95pt; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Cargo</span></td>
+				<td width="104" valign="top" style="width: 77.95pt; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Dependencia</span></td>
+				<td width="50" valign="top" style="width: 37.35pt; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Fecha</span></td>
+				<td width="130" valign="top" style="width: 97.3pt; border-left: medium none; border-right: 1.0pt solid black; border-top: 1.0pt solid black; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Razón del Cambio</span></td>
+			</tr>
+			<tr>
+				<td width="83" valign="top" style="width: 62.1pt; border-left: 1.0pt solid black; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">Autor (es)</span></td>
+				<td width="180" valign="top" style="width: 134.7pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+				<td width="104" valign="top" style="width: 77.95pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+				<td width="104" valign="top" style="width: 77.95pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+				<td width="50" valign="top" style="width: 37.35pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+				<td width="130" valign="top" style="width: 97.3pt; border-left: medium none; border-right: 1.0pt solid black; border-top: medium none; border-bottom: 1.0pt solid black; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+				<p class="MsoNormal" style="text-align:left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+				<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">&nbsp;</span></td>
+			</tr>
+		</table>
+		<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0; margin-left:60px; line-height:200%; margin-top:0" align="left">
+		<span style="font-family:Arial,sans-serif; font-size:16pt; line-height:115%">
+		<font style="font-size: 16pt; font-family:Arial,sans-serif; line-height:115%">&nbsp;</font></span></p>
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">
+		<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">
+		<font style="font-size: 16pt; font-family:Arial,sans-serif; line-height:115%">&nbsp;&nbsp;&nbsp; </font></span></p>
+		<p class="MsoNormal" style="text-align: left; line-height: 200%; margin-bottom: 0; margin-left:60px; margin-top:0">&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p>
+		<p class="MsoNormal" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p>
+		<p class="MsoListParagraphCxSpMiddle" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; font-family: Arial,sans-serif; line-height: 115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span></p>
+		<p class="MsoListParagraphCxSpMiddle" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">·<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+		<p class="MsoListParagraphCxSpMiddle" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">·<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;</span>·<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		<p class="MsoListParagraphCxSpMiddle" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">·<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		<p class="MsoListParagraphCxSpLast" style="text-align: left; margin-left:60px; line-height:200%; margin-top:0; margin-bottom:0">
+		<span style="font-size: 16pt; line-height: 115%; font-family: Arial,sans-serif">·<span style="font-family: Arial,sans-serif; font-size:16pt; line-height:115%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+		<p align="left" style="margin-left: 60px; line-height:200%; margin-top:0; margin-bottom:0">&nbsp;</p></div></div>
+		
+		
+<iframe src="https://docs.google.com/file/d/1UQ4hRo_DWySyRvjiCASpP1ClSwzsN8HP/preview" width="640" height="480"></iframe>
+
 </body>
+
 </html>
